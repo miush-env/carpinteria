@@ -1,0 +1,70 @@
+{
+	"projects": [
+		{
+			"id": 1,
+			"image_bank": [
+				"/assets/services/floor_inst.jpg",
+				"https://i.pinimg.com/736x/51/ee/b7/51eeb7e351776ba3b79c35738befbb86.jpg",
+				"https://i.pinimg.com/736x/0b/18/fd/0b18fd60f607f9887334e17f7618988a.jpg",
+				"https://i.pinimg.com/736x/84/d5/f2/84d5f29ad7ca53e5f42b70f93f1e0fc7.jpg"
+			],
+			"name": "Piso de porcelana",
+			"description_card": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repudiandae et dolorum ullam aliquid a odio, veritatis illo veniam repellendus.",
+			"description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dignissimos nihil excepturi cum odit exercitationem blanditiis quam debitis? Non quia repellat ipsa tempora animi aut sunt voluptas ab, quasi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad a consequuntur inventore ipsam, libero maxime temporibus. Exercitationem numquam ipsam quia non optio, laudantium ut dicta, ad modi eos vitae debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil numquam soluta quas recusandae voluptatibus quos ex fugit, impedit nam iure, unde, deserunt ea fuga aliquam nisi iste facilis sed?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dignissimos nihil excepturi cum odit exercitationem blanditiis quam debitis? Non quia repellat ipsa tempora animi aut sunt voluptas ab, quasi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad a consequuntur inventore ipsam, libero maxime temporibus. Exercitationem numquam ipsam quia non optio, laudantium ut dicta, ad modi eos vitae debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil numquam soluta quas recusandae voluptatibus quos ex fugit, impedit nam iure, unde, deserunt ea fuga aliquam nisi iste facilis sed?</p> <ul> <li>item 1</li> <li>item 2</li><li>item 3</li><li>item 4</li><li>item 5</li><li>item 6</li><li>item 7</li></ul>",
+			"tags": {
+				"duration": "4 meses",
+				"service": "Instalacion de piso",
+				"assistants": "4 Ayudantes"
+			},
+			"launch": "10 jun 2023",
+			"data_Foreman": {
+				"name": "Ariel Dundo",
+				"photo": "https://i.pinimg.com/736x/e0/1b/9c/e01b9c7a71675d17f4d9e2a26cabf89b.jpg"
+			}
+		},
+		{
+			"id": 2,
+			"image_bank": [
+				"/assets/services/floor_inst.jpg",
+				"https://i.pinimg.com/736x/51/ee/b7/51eeb7e351776ba3b79c35738befbb86.jpg",
+				"https://i.pinimg.com/736x/0b/18/fd/0b18fd60f607f9887334e17f7618988a.jpg",
+				"https://i.pinimg.com/736x/84/d5/f2/84d5f29ad7ca53e5f42b70f93f1e0fc7.jpg"
+			],
+			"name": "Proyecto 2",
+			"description_card": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repudiandae et dolorum ullam aliquid a odio, veritatis illo veniam repellendus.",
+			"description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dignissimos nihil excepturi cum odit exercitationem blanditiis quam debitis? Non quia repellat ipsa tempora animi aut sunt voluptas ab, quasi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad a consequuntur inventore ipsam, libero maxime temporibus. Exercitationem numquam ipsam quia non optio, laudantium ut dicta, ad modi eos vitae debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil numquam soluta quas recusandae voluptatibus quos ex fugit, impedit nam iure, unde, deserunt ea fuga aliquam nisi iste facilis sed?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dignissimos nihil excepturi cum odit exercitationem blanditiis quam debitis? Non quia repellat ipsa tempora animi aut sunt voluptas ab, quasi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad a consequuntur inventore ipsam, libero maxime temporibus. Exercitationem numquam ipsam quia non optio, laudantium ut dicta, ad modi eos vitae debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil numquam soluta quas recusandae voluptatibus quos ex fugit, impedit nam iure, unde, deserunt ea fuga aliquam nisi iste facilis sed?</p> <ul> <li>item 1</li> <li>item 2</li><li>item 3</li><li>item 4</li><li>item 5</li><li>item 6</li><li>item 7</li></ul>",
+			"tags": {
+				"duration": "4 meses",
+				"service": "Instalacion de piso",
+				"assistants": "4 Ayudantes"
+			},
+			"launch": "10 jun 2023",
+			"data_Foreman": {
+				"name": "Ariel Dundo",
+				"photo": "https://i.pinimg.com/736x/e0/1b/9c/e01b9c7a71675d17f4d9e2a26cabf89b.jpg"
+			}
+		},
+		{
+			"id": 3,
+			"image_bank": [
+				"/assets/services/floor_inst.jpg",
+				"https://i.pinimg.com/736x/51/ee/b7/51eeb7e351776ba3b79c35738befbb86.jpg",
+				"https://i.pinimg.com/736x/0b/18/fd/0b18fd60f607f9887334e17f7618988a.jpg",
+				"https://i.pinimg.com/736x/84/d5/f2/84d5f29ad7ca53e5f42b70f93f1e0fc7.jpg"
+			],
+			"name": "Proyecto 3",
+			"description_card": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repudiandae et dolorum ullam aliquid a odio, veritatis illo veniam repellendus.",
+			"description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dignissimos nihil excepturi cum odit exercitationem blanditiis quam debitis? Non quia repellat ipsa tempora animi aut sunt voluptas ab, quasi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad a consequuntur inventore ipsam, libero maxime temporibus. Exercitationem numquam ipsam quia non optio, laudantium ut dicta, ad modi eos vitae debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil numquam soluta quas recusandae voluptatibus quos ex fugit, impedit nam iure, unde, deserunt ea fuga aliquam nisi iste facilis sed?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dignissimos nihil excepturi cum odit exercitationem blanditiis quam debitis? Non quia repellat ipsa tempora animi aut sunt voluptas ab, quasi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad a consequuntur inventore ipsam, libero maxime temporibus. Exercitationem numquam ipsam quia non optio, laudantium ut dicta, ad modi eos vitae debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nihil numquam soluta quas recusandae voluptatibus quos ex fugit, impedit nam iure, unde, deserunt ea fuga aliquam nisi iste facilis sed?</p> <ul> <li>item 1</li> <li>item 2</li><li>item 3</li><li>item 4</li><li>item 5</li><li>item 6</li><li>item 7</li></ul>",
+			"tags": {
+				"duration": "4 meses",
+				"service": "Instalacion de piso",
+				"assistants": "4 Ayudantes"
+			},
+			"launch": "10 jun 2023",
+			"data_Foreman": {
+				"name": "Ariel Dundo",
+				"photo": "https://i.pinimg.com/736x/e0/1b/9c/e01b9c7a71675d17f4d9e2a26cabf89b.jpg"
+			}
+		}
+	]
+}

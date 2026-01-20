@@ -1,0 +1,111 @@
+/* 
+  ===============
+  CSS Reset Moderno
+  ===============
+*/
+
+/* 
+  1. Usa un modelo de caja más intuitivo.
+  Todos los elementos y pseudo-elementos heredan esta propiedad.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 
+  2. Elimina los márgenes por defecto en la mayoría de los elementos.
+*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* 
+  3. Elimina los estilos de lista en elementos ul, ol con una clase.
+   Esto es opcional, pero útil para listas que se usarán para navegación.
+   Puedes crear una clase `list-reset` y aplicarla donde la necesites.
+*/
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* 
+  4. Establece valores por defecto para el body.
+*/
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+	font-family: sans-serif; /* Define aquí tu fuente principal */
+	text-rendering: optimizeSpeed;
+}
+
+/* 
+  5. Haz que las imágenes y otros medios sean más fáciles de trabajar.
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 
+  6. Asegura que los elementos de formulario hereden la fuente.
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 
+  7. Mejora el balance del texto en encabezados para una mejor legibilidad.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/* 
+  8. Elimina todas las animaciones y transiciones para usuarios que prefieren movimiento reducido.
+*/
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms;
+		animation-iteration-count: 1;
+		transition-duration: 0.01ms;
+		scroll-behavior: auto;
+	}
+}
+
+a {
+	text-decoration: none;
+}

@@ -1,0 +1,35 @@
+{
+	"caption_top": "Tu proyecto merece lo mejor. Nosotros lo hacemos",
+	"title": "que te <span class='text-outline outline-white'>ofrecemos</span>",
+	"description": "Cuidamos tu bolsillo como cuidamos tu trabajo: con dedicación, respeto y la intención de darte siempre lo mejor. Nos esforzamos por ofrecerte calidad real, precios justos y un servicio que te deje tranquilo, sabiendo que recibís más de lo que esperabas.",
+	"services": [
+		{
+			"icon": "/assets/icon_servicves/furn_rest.png",
+			"title": "Restauración de muebles",
+			"description": "Restauramos tus muebles y los dejamos como el día que los compraste: renovados, firmes y listos para lucirse de nuevo.",
+			"section_page": "furn_rest",
+			"ms_whatsapp": "Hola%2C%20quiero%20consultar%20sobre%20la%20restauraci%C3%B3n%20de%20muebles."
+		},
+		{
+			"icon": "/assets/icon_servicves/cust_homes.png",
+			"title": "Viviendas personalizadas",
+			"description": "Si soñás con tener tu propia casa, la construimos desde cero con dedicación, materiales de calidad y un diseño pensado para vos.",
+			"section_page": "teamwork",
+			"ms_whatsapp": "Hola%2C%20quiero%20consultar%20sobre%20la%20construcci%C3%B3n%20de%20viviendas%20personalizadas."
+		},
+		{
+			"icon": "/assets/icon_servicves/int_reno.png",
+			"title": "Renovación de ambientes",
+			"description": "Podemos renovar y reparar sectores de tu hogar sin comprometer la estructura, manteniendo seguridad y estética.",
+			"section_page": "fun_reno",
+			"ms_whatsapp": "Hola%2C%20quiero%20consultar%20sobre%20la%20renovaci%C3%B3n%20de%20ambientes."
+		},
+		{
+			"icon": "/assets/icon_servicves/floor_inst.png",
+			"title": "Instalación de pisos",
+			"description": "Si amás la calidez de la madera, instalamos pisos resistentes y estéticamente perfectos para que tu hogar se sienta único.",
+			"section_page": "floor_inst",
+			"ms_whatsapp": "Hola%2C%20quiero%20consultar%20sobre%20la%20instalaci%C3%B3n%20de%20pisos."
+		}
+	]
+}

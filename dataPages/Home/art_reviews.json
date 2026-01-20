@@ -1,0 +1,24 @@
+{
+	"reviews": [
+		{
+			"name": "Carlos Juan",
+			"rate": 5,
+			"comment": "excelente servio, las viviendas personalizadas son un lujo, lo mas sorprendente es lo rápido y que siempre están atentos a tu opinion trabajo, mi familia y yo vivimos ahora todos en la casa"
+		},
+		{
+			"name": "Luis Perez",
+			"rate": 4,
+			"comment": "excelente servicio, me gusto bastante la restauración de muebles, pero creo que la espera fue medio larga (2 días), pero se justificaron con la saturacion de trabajo y lo entiendo"
+		},
+		{
+			"name": "Sofia Aguilera",
+			"rate": 3,
+			"comment": "excelente servicio, pero no me gusto la renovación de ambientes, pero dentro de todo lo hicieron rápido, y siempre están disponibles para cambios de planes y demás cosas que te ocurran"
+		},
+		{
+			"name": "Andres Gomez",
+			"rate": 4,
+			"comment": "excelente servicio, me gusto bastante la instalación del piso de madera natural, los recomiendo bastante dentro de mi grupo"
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"about_we_sects": [
+		{
+			"img_url": "/assets/AboutWe/home_workshop.png",
+			"icon": "home",
+			"title": "como iniciamos",
+			"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod accusamus esse fuga, distinctio temporibus eveniet culpa repudiandae sunt aperiam iusto cupiditate! Officiis provident nemo illum quo quibusdam, voluptate quisquam labore consequuntur, nesciunt rem soluta id autem fugit nam dolores hic aut aliquid enim necessitatibus fugiat possimus voluptates beatae! Modi provident sed animi quas soluta quae pariatur sint illum asperiores non tempore et, sapiente inventore mollitia nesciunt. Rem quia beatae ea hic molestias et sit voluptatibus!"
+		},
+		{
+			"img_url": "/assets/AboutWe/teamwork.png",
+			"icon": "eye_tracking",
+			"title": "nueustras metas",
+			"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, iusto odit! Incidunt ex voluptates reiciendis molestiae placeat, ab, sequi veritatis adipisci enim laudantium sit accusantium ipsam, laborum vitae laboriosam iure."
+		}
+	]
+}

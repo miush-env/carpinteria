@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/reset.css" />
+		<link rel="stylesheet" href="workDoneStyle.css" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+			rel="stylesheet"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="header-nav-bar">
+			<div>
+				<a href="/index.html">
+					<img src="assets/brand-1.png" alt="logo" />
+				</a>
+			</div>
+			<nav class="nav-bar">
+				<ul class="list-link-page">
+					<li class="item-link-page">
+						<span class="material-symbols-outlined"> home </span>
+						<a href="/index.html" class="link-page">Inicio</a>
+					</li>
+					<li class="item-link-page">
+						<span class="material-symbols-outlined"> info </span>
+						<a href="#about-we" class="link-page">Sobre Nosotros</a>
+					</li>
+					<li class="item-link-page">
+						<span class="material-symbols-outlined"> handyman </span>
+						<a href="/service.html" class="link-page">Servicios</a>
+					</li>
+					<li class="item-link-page">
+						<span class="material-symbols-outlined"> call </span>
+						<a href="https://wa.me/541134229643" class="link-page">Contacto</a>
+					</li>
+				</ul>
+			</nav>
+
+			<span class="material-symbols-outlined menu-toggle">menu</span>
+			<div class="dropdown-menu">
+				<div class="blur"></div>
+				<ul class="cont-link-dropdown">
+					<li class="item-link-page">
+						<span class="material-symbols-outlined"> home </span>
+						<a href="/index.html" class="link-page">Inicio</a>
+					</li>
+					<li class="item-link-page">
+						<span class="material-symbols-outlined"> info </span>
+						<a href="#about-we" class="link-page">Sobre Nosotros</a>
+					</li>
+					<li class="item-link-page">
+						<span class="material-symbols-outlined"> handyman </span>
+						<a href="/service.html" class="link-page">Servicios</a>
+					</li>
+					<li class="item-link-page">
+						<span class="material-symbols-outlined"> call </span>
+						<a href="https://wa.me/541134229643" class="link-page">Contacto</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<main id="render_data">
+			<article class="cont-title-work">
+				<section class="cont-img-clipPath">
+					<div class="position-img">
+						<img src="" alt="imagen con clip-path" class="front_page" />
+						<div class="img-overlay"></div>
+					</div>
+					<div class="cont-info-work">
+						<h1></h1>
+						<div class="info-foreman">
+							<span class="material-symbols-outlined"> draw </span>
+							<span class="name_foreman"></span>
+						</div>
+					</div>
+				</section>
+			</article>
+
+			<article class="about-project">
+				<section class="info-project">
+					<ul>
+						<li>
+							<span class="material-symbols-outlined"> avg_pace </span>
+							<span>
+								Duración : <span class="underlined" data-key="duration"></span>
+							</span>
+						</li>
+						<li>
+							<span class="material-symbols-outlined">
+								home_repair_service
+							</span>
+							<span>
+								Servicio :
+								<span class="underlined" data-key="service"></span>
+							</span>
+						</li>
+						<li>
+							<span class="material-symbols-outlined"> groups_2 </span>
+							<span>
+								Ayudantes :
+								<span class="underlined" data-key="assistants"></span>
+							</span>
+						</li>
+						<li>
+							<span class="material-symbols-outlined"> person </span>
+							<span
+								>Maestro de obra :
+								<span class="underlined" data-key="foremanName"></span
+							></span>
+						</li>
+					</ul>
+				</section>
+
+				<section class="service-description"></section>
+
+				<section class="img-project">
+					<h2>Imágenes del Proyecto y videos</h2>
+					<div class="carousel-img-project">
+						<div class="track" id="track"></div>
+						<div class="indicators" id="indicators"></div>
+					</div>
+
+					<div class="modal" id="modal">
+						<span class="close" id="close">&times;</span>
+						<img id="modal-img" src="" />
+					</div>
+				</section>
+			</article>
+		</main>
+
+		<footer class="main-footer">
+			<div class="footer-top">
+				<div class="container top-content">
+					<div class="cta-text">
+						¿HAS VISTO SUFICIENTE?
+						<span class="arrow">
+							<span class="material-symbols-outlined"> arrow_right_alt </span>
+						</span>
+					</div>
+					<a href="https://wa.me/541134229643">
+						<h2 class="contact-title">Contáctanos</h2>
+					</a>
+					<div class="circle-btn">
+						<a href="https://wa.me/541134229643" class="arrow-down">
+							<span
+								class="material-symbols-outlined"
+								style="
+									color: #fff;
+									font-variation-settings: 'wght' 500;
+									font-size: 2rem;
+								"
+							>
+								arrow_right_alt
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="container bottom-grid">
+					<div class="footer-col branding">
+						<h3 class="brand-slogan">
+							La empresa para personas
+							<span class="highlight">impacientes</span>®
+						</h3>
+					</div>
+
+					<div class="footer-col">
+						<h4>SECCIONES</h4>
+						<ul class="footer-links">
+							<li><a href="/index.html">Inicio</a></li>
+							<li><a href="/index.html#about-we">Sobre Nosotros</a></li>
+							<li><a href="/service.html">Servicios</a></li>
+							<li><a href="/index.html#projects-done">Proyectos</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-col">
+						<h4>BUENOS AIRES</h4>
+						<p>
+							<a href="mailto:leiradundo@gmail.com" target="_blank"
+								>leiradundo@gmail.com</a
+							>
+						</p>
+
+						<a href="https://wa.me/541134229643" target="_blank"
+							>+54 11 3422 9643</a
+						>
+						<p>Los Patitos Hurlingham,<br />Buenos Aires</p>
+						<a
+							href="https://maps.app.goo.gl/RJtxjJynemTW5DYB9"
+							target="_blank"
+							class="map-link"
+							>VER EN MAPA ↗</a
+						>
+					</div>
+
+					<div class="footer-col">
+						<h4>¿QUIERES EL MEJOR SERVICIO DE CARPINTERIA?</h4>
+						<a href="https://wa.me/541134229643" class="newsletter-link"
+							>CONTRATANOS YA ! →</a
+						>
+
+						<div class="social-section">
+							<p>SÍGUENOS</p>
+							<div class="social-icons">
+								<a href="#">
+									<img
+										src="/assets/icons_svg/brand-facebook.svg"
+										width="25px"
+										alt=""
+									/>
+								</a>
+								<a href="https://www.instagram.com/leiradundo">
+									<img
+										src="/assets/icons_svg/brand-instagram.svg"
+										width="25px"
+										alt=""
+									/>
+								</a>
+								<a href="https://wa.me/541134229643">
+									<img
+										src="/assets/icons_svg/brand-whatsapp.svg"
+										width="25px"
+										alt=""
+									/>
+								</a>
+								<a href="#">
+									<img
+										src="/assets/icons_svg/brand-linkedin.svg"
+										width="25px"
+										alt=""
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="/scripts/workDone.js"></script>
+	</body>
+</html>
