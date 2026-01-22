@@ -1,9 +1,16 @@
 const header = document.querySelector('.header-nav-bar');
-const toggle = document.querySelector('.menu-toggle');
+const toggle = document.querySelector('.menu-toggle');  
+const links = document.querySelectorAll('.nav-bar a');
 
 toggle.addEventListener('click', () => {
 	header.classList.toggle('active');
 })
+
+links.forEach(link =>
+    link.addEventListener('click', () => {
+      header.classList.remove('active');
+    })
+  );
 
 // ! DataBase Local Json
 const art_welcome = '/dataPages/Home/art_welcome.json';
