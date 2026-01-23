@@ -570,10 +570,8 @@ h6 {
 
 .works-list {
   display: grid;
-  height: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 10px;
 }
 
 .works-order {
