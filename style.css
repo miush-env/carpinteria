@@ -570,6 +570,7 @@ h6 {
 
 .works-list {
   display: grid;
+  /* height: 100%; */
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 10px;
 }
@@ -645,13 +646,9 @@ h6 {
   height: 400px;
   background-color: #f5f3ef;
   border-radius: 8px;
-  transition:
-    transform 0.35s 0.2s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.3s 0.2s ease,
-    background-color 0.25s 0.2s ease;
 }
 
-.work-card:hover {
+.work-card-click {
   cursor: pointer;
   background-color: #eeedec;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
@@ -666,6 +663,7 @@ h6 {
     color: #f5f3ef;
     border-radius: 50%;
   }
+
 }
 
 .work-image {
@@ -774,6 +772,44 @@ h6 {
 }
 
 .cont-carousel-review {
+  display: flex;
+  width: max-content;
+  animation: scroll 18s linear infinite;
+  will-change: transform;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.review {
+  flex-shrink: 0;
+  margin-right: 2rem;
+  /* 🔑 NO se achican */
+  width: 25rem;
+  height: 17rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f5f3ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+  will-change: transform;
+}
+
+.cont-carousel-review {
   height: 100%;
   display: flex;
   gap: 2rem;
@@ -812,7 +848,7 @@ h6 {
   will-change: transform;
 }
 
-.review:hover {
+.work-card-click {
   background: linear-gradient(to right top, #d36b00, #e67c04, #eba85a);
   box-shadow: 0 0 50px 0 #b56512;
   color: #111;
@@ -820,7 +856,7 @@ h6 {
   z-index: 5;
 }
 
-.review:hover * {
+.work-card-click * {
   color: #fff;
 }
 
@@ -1003,6 +1039,12 @@ h6 {
     height: auto;
   }
 
+  .art-work-done {
+    height: auto;
+    min-height: unset;
+    padding: 1rem 1rem 1.25rem;
+  }
+
   .art-about-we>section {
     height: auto;
     justify-content: center;
@@ -1036,15 +1078,58 @@ h6 {
   .works-filters>label {
     width: 100%;
   }
+
+  .projects {
+    height: auto;
+    max-height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    /* padding-right: 0; */
+    padding-bottom: 1rem;
+    display: inline-block;
+
+    scroll-behavior: smooth;
+  }
+
+  .projects::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .projects::-webkit-scrollbar-thumb {
+    background-color: #b56512;
+    border-radius: 10px;
+  }
+
+  .works-list {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    align-items: stretch;
+
+    scroll-snap-type: x mandatory;
+  }
+
+  .work-item {
+    flex: 0 0 auto;
+    width: 85vw;
+    max-width: 360px;
+
+    scroll-snap-align: start;
+  }
 }
 
 @media (max-width: 768px) {
-  .review:hover {
+  .work-card-click {
     background: linear-gradient(to right top, #d36b00, #e67c04, #eba85a);
     box-shadow: 0 0 50px 0 #b56512;
     color: #111;
-    transform: scale(1.04);
+    transform: scale(1.08);
     z-index: 5;
+  }
+
+  .works-filters {
+    display: none;
   }
 
   .description-welcome {
@@ -1081,11 +1166,6 @@ h6 {
   .works-list {
     height: 100%;
     gap: 0.75rem;
-  }
-
-  .works-filters {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
   }
 
   .work-item {
