@@ -14,6 +14,7 @@ h6 {
   font-family: 'TASA Orbiter', sans-serif;
 }
 
+
 /* HEADER & NAV */
 .header-nav-bar {
   z-index: 10;
@@ -338,7 +339,6 @@ h6 {
   background-color: #f5f3ef;
   color: #2b2b2b;
   padding: clamp(1rem, 3vw, 2rem);
-
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -357,8 +357,8 @@ h6 {
 .service div {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   align-items: center;
-  margin-top: auto;
   flex-wrap: nowrap;
 }
 
@@ -369,18 +369,22 @@ h6 {
 .service a {
   flex-shrink: 0;
   white-space: nowrap;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 7px 40px;
   background-color: #e67c04;
   color: #f5f3ef;
-  border: solid 2px transparent;
+  border: 2px solid transparent;
   font-weight: 600;
+  cursor: pointer;
+
   transition:
-    background-color 0.3s 0.1s ease,
-    color 0.3s 0.1s ease;
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.1s ease;
 }
 
-.service a:hover {
+.service a:active {
   background-color: #f5f3ef;
   border: solid 2px #e67c04;
   color: #000;
@@ -558,10 +562,11 @@ h6 {
 }
 
 .projects::-webkit-scrollbar-thumb {
-  background-color: #b56512;
+  background-color: #412506;
   border-radius: 10px;
   border: 2px solid transparent;
   background-clip: content-box;
+
 }
 
 .projects::-webkit-scrollbar-thumb:hover {
@@ -1097,7 +1102,7 @@ h6 {
   }
 
   .projects::-webkit-scrollbar-thumb {
-    background-color: #b56512;
+    background-color: #412506;
     border-radius: 10px;
   }
 
@@ -1120,6 +1125,24 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  .art-services {
+    background-image: url("assets/parallax-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome-art-services>span {
+    display: none;
+  }
+
+  .welcome-art-services>p {
+    display: none;
+  }
+
   .work-card-click {
     background: linear-gradient(to right top, #d36b00, #e67c04, #eba85a);
     box-shadow: 0 0 50px 0 #b56512;
