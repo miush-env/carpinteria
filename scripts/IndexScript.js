@@ -86,6 +86,7 @@ getData(art_about_we).then(data=> {
 
 // * Article reviews
 const $reviewsContainer = document.querySelector('.cont-carousel-review');
+
 getData(art_reviews).then(data => {
   data.reviews.forEach(review => {
     const reviewDiv = document.createElement('div');
@@ -108,65 +109,136 @@ getData(art_reviews).then(data => {
 let paused = false;
 
 $reviewsContainer.addEventListener('click', e => {
-  if (e.target.closest('.review')) {
-    paused = !paused;
-    $reviewsContainer.style.animationPlayState = paused ? 'paused' : 'running';
+   const card = e.target.closest('.review');
+  if (!card) return;
+
+  // 🔹 pausa / reanuda animación
+  paused = !paused;
+  $reviewsContainer.style.animationPlayState = paused ? 'paused' : 'running';
+
+  const activeCard = $reviewsContainer.querySelector('.review.work-card-click');
+
+  // click en la misma → quitar clase
+  if (card === activeCard) {
+    card.classList.remove('work-card-click');
+    return;
   }
-  
+
+  // quitar clase a la anterior
+  if (activeCard) {
+    activeCard.classList.remove('work-card-click');
+  }
+
+  // agregar clase a la nueva
+  card.classList.add('work-card-click');  
 });
 
-
-
 // * Article Work Done
+
 getData(art_projects).then(data => {
   const $workList = document.querySelector('.works-list');
+  const $searchInput = document.getElementById('search-work');
+  const $filterButtons = document.querySelectorAll('.works-order button');
 
-  data.projects.forEach(project => {
-    const workItem = document.createElement('li');
-    workItem.classList.add('work-item');
+  let projects = data.projects;
+  let filteredProjects = [...projects];
 
-    const image = project.image_bank?.[0] ?? 'fallback.jpg';
-    const { duration, service, assistants } = project.tags ?? {};
-    const foreman = project.data_Foreman ?? {};
+  function renderProjects(list) {
+    $workList.innerHTML = '';
 
-    workItem.innerHTML = `
-      <article class="work-card">
-        <div class="work-image">
-          <img src="${image}" width="250px" alt="${project.name}">
-        </div>
+    list.forEach(project => {
+      const workItem = document.createElement('li');
+      workItem.classList.add('work-item');
 
-        <div class="work-body">
-          <ul class="work-tags">
-            <li>${duration ?? ''}</li>
-     
-            <li>${assistants ?? ''}</li>
-          </ul>
+      const image = project.image_bank?.[0] ?? 'fallback.jpg';
+      const { duration, service, assistants } = project.tags ?? {};
+      const foreman = project.data_Foreman ?? {};
 
-          <header class="work-head">
-            <h5 class="work-title">${project.name}</h5>
-            <span class="material-symbols-outlined" aria-hidden="true">
-              arrow_outward
-            </span>
-          </header>
+      workItem.innerHTML = `
+        <article class="work-card">
+          <div class="work-image">
+            <img src="${image}" width="250px" alt="${project.name}">
+          </div>
 
-          <p class="work-desc">${project.description_card}</p>
+          <div class="work-body">
+            <ul class="work-tags">
+              <li>${duration ?? ''}</li>
+              <li>${assistants ?? ''}</li>
+            </ul>
 
-          <figure class="work-author">
-            <img src="${foreman.photo ?? ''}" alt="${foreman.name ?? ''}">
-            <figcaption class="author-info">
-              <h6 class="author-name">${foreman.name ?? ''}</h6>
-              <time class="author-date" datetime="${project.launch}">${project.launch}</time>
-            </figcaption>
-          </figure>
-        </div>
-      </article>
-    `;
+            <header class="work-head">
+              <h5 class="work-title">${project.name}</h5>
+              <span class="material-symbols-outlined" aria-hidden="true">
+                arrow_outward
+              </span>
+            </header>
+
+            <p class="work-desc">${project.description_card}</p>
+
+            <figure class="work-author">
+              <img src="${foreman.photo ?? ''}" alt="${foreman.name ?? ''}">
+              <figcaption class="author-info">
+                <h6 class="author-name">${foreman.name ?? ''}</h6>
+                <time class="author-date" datetime="${project.launch}">
+                  ${project.launch}
+                </time>
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+      `;
 
       workItem.addEventListener('click', () => {
         window.location.href = `workDone.html?id=${project.id}`;
       });
 
-    $workList.appendChild(workItem);
+      $workList.appendChild(workItem);
+    });
+  }
+
+  // 🔍 BUSCADOR
+  $searchInput.addEventListener('input', e => {
+    const query = e.target.value.toLowerCase();
+
+    filteredProjects = projects.filter(project => {
+      const text = `
+        ${project.name}
+        ${project.description_card}
+        ${project.tags?.duration}
+        ${project.tags?.service}
+        ${project.data_Foreman?.name}
+      `.toLowerCase();
+
+      return text.includes(query);
+    });
+
+    renderProjects(filteredProjects);
   });
+
+  // 🎛️ FILTROS
+  $filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const type = button.textContent.trim();
+
+      let sorted = [...filteredProjects];
+
+      if (type === 'A–Z') {
+        sorted.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
+      }
+
+      if (type === 'Recientes') {
+        sorted.sort((a, b) =>
+          new Date(b.launch) - new Date(a.launch)
+        );
+      }
+
+      renderProjects(sorted);
+    });
+  });
+
+  // Render inicial
+  renderProjects(projects);
 });
 
