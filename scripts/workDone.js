@@ -149,3 +149,7 @@ modal.onclick =  e => {
     })
   );
 
+
+document.getElementById('btnBackPage').addEventListener('click', () => {
+  window.history.back();
+});

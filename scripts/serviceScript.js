@@ -13,3 +13,7 @@
     })
   );
 
+  1
+document.getElementById('btnBackPage').addEventListener('click', () => {
+  window.history.back();
+});

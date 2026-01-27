@@ -241,4 +241,3 @@ getData(art_projects).then(data => {
   // Render inicial
   renderProjects(projects);
 });
-
