@@ -78,6 +78,14 @@ h6 {
 
 .nav-bar {
   display: flex;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.nav-bar.active {
+  max-height: 500px;
+  /* ajusta según el contenido */
 }
 
 .list-link-page {
@@ -137,6 +145,11 @@ h6 {
     transition: max-height 0.4s ease;
   }
 
+  .nav-bar.active {
+    max-height: 500px;
+    /* ajusta según el contenido */
+  }
+
   .header-nav-bar.active .nav-bar {
     max-height: 400px;
     border-radius: 0 0 10px 10px;
@@ -144,14 +157,16 @@ h6 {
   }
 
   .list-link-page {
+    width: 100%;
     flex-direction: column;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
   }
 
   .item-link-page {
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     justify-content: start;
+    box-shadow: 0 6px 10px -4px #462601;
   }
 
   .menu-toggle {
@@ -317,6 +332,16 @@ h6 {
   animation: slide-left 0.6s 0.2s linear both;
 }
 
+
+
+/**/
+/* @keyframes fadeUp { */
+/*   to { */
+/*     opacity: 1; */
+/*     transform: translateY(0); */
+/*   } */
+/* } */
+/**/
 .ladder-ant-1,
 .ladder-ant-2,
 .ladder-ant-3,
@@ -338,6 +363,7 @@ h6 {
 }
 
 .ladder-ant-3 {
+  animation-duration: 0.55s;
   animation-name: ladder-ant;
   animation-delay: 0.3s;
 }
@@ -354,6 +380,24 @@ h6 {
 .ladder-ant-3-r {
   animation-name: ladder-ant-r;
   animation-delay: 0.3s;
+}
+
+.ladder-ant-btn {
+  animation-name: ladder-ant-btn;
+  animation-duration: 1.25s;
+  animation-delay: .4s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes ladder-ant-btn {
+  from {
+    transform: translateX(-200%)
+  }
+
+  to {
+    transform: translateX(0)
+  }
 }
 
 @keyframes ladder-ant {
@@ -612,6 +656,27 @@ h6 {
     flex-direction: column;
     text-align: center;
     gap: 20px;
+  }
+
+  .art-service-1,
+  .art-service-2,
+  .art-service-3,
+  .art-service-4 {
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+
+  .art-service-blur {
+    filter: blur(6px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .art-service-active {
+    filter: none;
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    z-index: 5;
   }
 }
 
