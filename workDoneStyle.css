@@ -122,14 +122,16 @@ h6 {
   }
 
   .list-link-page {
+    width: 100%;
     flex-direction: column;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
   }
 
   .item-link-page {
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     justify-content: start;
+    box-shadow: 0 6px 10px -4px #462601;
   }
 
   .menu-toggle {
