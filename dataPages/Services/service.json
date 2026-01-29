@@ -1,0 +1,56 @@
+{
+  "service": [
+    {
+      "id": 1,
+      "title": "Restauración de muebles",
+      "description": "Nuestro servicio de restauración de muebles está pensado para devolverle vida, resistencia y belleza a piezas que el tiempo, el uso o el desgaste fueron afectando. Trabajamos tanto con muebles antiguos como modernos, respetando su estilo original y cuidando cada detalle para que vuelvan a lucirse como merecen. El proceso comienza con una evaluación detallada del mueble, donde analizamos el estado de la madera, la estructura, las uniones, superficies, herrajes y acabados. A partir de ese diagnóstico definimos el tipo de restauración necesaria, priorizando siempre la solidez y la durabilidad sin perder la esencia del diseño original. Realizamos reparaciones estructurales, refuerzos en zonas debilitadas, reemplazo de piezas dañadas y recuperación estética completa. Nos encargamos de la limpieza profunda, el lijado preciso, la corrección de imperfecciones y la aplicación de tratamientos protectores que prolongan la vida útil del mueble. Según el caso, aplicamos teñidos, barnizados, laqueados o acabados especiales, adaptándonos a tus gustos y al estilo de tu espacio. Cada trabajo se realiza de manera artesanal, con materiales de calidad y un enfoque cuidadoso, buscando un resultado prolijo, firme y visualmente atractivo. Antes de comenzar, te brindamos una orientación clara sobre el trabajo a realizar y una estimación acorde al estado real del mueble, para que tengas total tranquilidad desde el primer momento.",
+      "list": [
+        "Reparación y refuerzo de estructuras dañadas",
+        "Restauración de superficies desgastadas o rayadas",
+        "Lijado, teñido, barnizado o laqueado",
+        "Reemplazo o ajuste de herrajes",
+        "Protección y acabado final para mayor durabilidad"
+      ],
+      "img": "/assets/services/furn_rest.png"
+    },
+    {
+      "id": 2,
+      "title": "Viviendas personalizadas",
+      "description": "Nuestro servicio de viviendas personalizadas está pensado para quienes desean construir su hogar desde cero, con un diseño único y adaptado completamente a sus necesidades, gustos y estilo de vida. Acompañamos cada proyecto desde la idea inicial hasta la finalización de la obra, cuidando cada detalle para que el resultado sea una casa funcional, cómoda y hecha a medida. Trabajamos de forma personalizada, escuchando tus ideas y asesorándote en cada etapa del proceso. Analizamos el espacio disponible, el tipo de construcción más conveniente y los materiales adecuados para lograr una vivienda sólida, duradera y estéticamente armoniosa. Utilizamos materiales de calidad y técnicas de construcción confiables, priorizando siempre la seguridad, el confort y la eficiencia. Nos enfocamos en crear espacios bien distribuidos, prácticos y pensados para el día a día, respetando tus preferencias en cuanto a diseño, terminaciones y estilo. Desde la estructura principal hasta los detalles finales, cada paso se realiza con compromiso, responsabilidad y una planificación clara para que el proceso sea ordenado y sin sorpresas. Antes de comenzar, te brindamos una orientación detallada sobre el proyecto, los tiempos de ejecución y una estimación ajustada a lo que buscás, para que tengas la tranquilidad de saber que tu hogar está en buenas manos.",
+      "list": [
+        "Diseño y planificación personalizada de la vivienda",
+        "Construcción desde cero",
+        "Asesoramiento en materiales y terminaciones",
+        "Organización y ejecución de cada etapa de la obra",
+        "Seguimiento del proyecto hasta su finalización"
+      ],
+      "img": "/assets/services/teamwork.png"
+    },
+    {
+      "id": 3,
+      "title": "Renovación de ambientes",
+      "description": "Nuestro servicio de renovación de ambientes está pensado para transformar y mejorar espacios de tu hogar sin necesidad de realizar cambios estructurales. Es ideal para quienes buscan darle un aire nuevo a su casa, actualizar sectores específicos o solucionar desgastes propios del uso diario, manteniendo siempre la seguridad y la armonía del lugar. Realizamos un análisis previo del ambiente a renovar, evaluando el estado actual y las posibilidades de mejora. A partir de eso, planificamos las tareas necesarias para optimizar tanto la funcionalidad como la estética del espacio. Trabajamos con atención al detalle, cuidando cada terminación para lograr un resultado prolijo, cómodo y visualmente agradable. Nos encargamos de reparar superficies dañadas, mejorar terminaciones, renovar revestimientos y adaptar el ambiente a nuevas necesidades, respetando la estructura existente de la vivienda. Utilizamos materiales adecuados y técnicas seguras, buscando que el cambio se note, pero sin generar complicaciones innecesarias ni obras invasivas. Antes de comenzar, te asesoramos sobre las opciones disponibles y te brindamos una estimación clara del trabajo a realizar, para que puedas renovar tu hogar con tranquilidad y confianza.",
+      "list": [
+        "Renovación de espacios interiores",
+        "Reparación de superficies y terminaciones",
+        "Mejora estética sin modificaciones estructurales",
+        "Optimización de ambientes existentes",
+        "Asesoramiento personalizado según cada espacio"
+      ],
+      "img": "assets/services/int_reno.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Instalación de pisos",
+      "description": "Nuestro servicio de instalación de pisos está pensado para quienes buscan sumar calidez, estilo y durabilidad a sus espacios. Trabajamos especialmente con pisos de madera y soluciones similares, logrando superficies firmes, prolijas y estéticamente cuidadas que transforman por completo cualquier ambiente del hogar. Antes de comenzar, realizamos una evaluación del espacio para verificar el estado del suelo, los niveles y las condiciones necesarias para una correcta instalación. A partir de ahí, definimos el tipo de piso más adecuado según el uso del ambiente, el tránsito diario y el estilo que buscás, asegurando un resultado resistente y de larga vida útil. La instalación se realiza con precisión y atención al detalle, cuidando las uniones, terminaciones y alineaciones para lograr un acabado parejo y elegante. Nos enfocamos en que el piso no solo se vea bien, sino que también sea cómodo, estable y seguro para el uso cotidiano. Además, te asesoramos en el mantenimiento y cuidado del piso para que conserve su apariencia y calidad con el paso del tiempo. Antes de iniciar el trabajo, te brindamos una estimación clara y acorde al proyecto, para que tengas total confianza en cada etapa del proceso.",
+      "list": [
+        "Instalación de pisos de madera",
+        "Preparación y nivelación del suelo",
+        "Ajuste y terminaciones prolijas",
+        "Asesoramiento según el uso del ambiente",
+        "Recomendaciones para el cuidado y mantenimiento"
+      ],
+      "img": "/assets/services/floor_inst.jpg"
+    }
+  ]
+}
