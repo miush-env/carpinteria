@@ -1,16 +1,47 @@
+
 const header = document.querySelector('.header-nav-bar');
 const toggle = document.querySelector('.menu-toggle');  
 const links = document.querySelectorAll('.nav-bar a');
 
+// Abrir/cerrar menú al hacer click en el toggle
 toggle.addEventListener('click', () => {
-	header.classList.toggle('active');
-})
+  if (window.innerWidth > 899) return; // solo mobile
+  header.classList.toggle('active');
+});
 
+// Cerrar menú al hacer click en un link
 links.forEach(link =>
-    link.addEventListener('click', () => {
-      header.classList.remove('active');
-    })
-  );
+  link.addEventListener('click', () => {
+    header.classList.remove('active');
+  })
+);
+
+// Cerrar menú al hacer scroll (solo mobile)
+window.addEventListener('scroll', () => {
+  if (window.innerWidth > 899) return;
+  if (header.classList.contains('active')) {
+    header.classList.remove('active');
+  }
+});
+
+// Cerrar menú al hacer swipe hacia arriba (solo mobile)
+let touchStartY = 0;
+const minSwipeDistance = 30;
+
+document.addEventListener('touchstart', (e) => {
+  if (window.innerWidth > 899) return;
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+document.addEventListener('touchend', (e) => {
+  if (window.innerWidth > 899) return;
+  const touchEndY = e.changedTouches[0].clientY;
+  const distance = touchStartY - touchEndY;
+  if (distance > minSwipeDistance && header.classList.contains('active')) {
+    header.classList.remove('active');
+  }
+}, { passive: true });
+
 
 // ! DataBase Local Json
 const art_welcome = '/dataPages/Home/art_welcome.json';
@@ -43,32 +74,33 @@ getData(art_welcome).then(data => {
 });
 
 // * Article About Services
-const $captionTop = document.querySelector('.welcome-art-services span')
-getData(art_services).then(data => {
-  $captionTop.textContent = data.caption_top;
-  document.querySelector('.welcome-art-services h2').innerHTML = data.title;
-  document.querySelector('.welcome-art-services p').innerHTML = data.description;
-});
-
 const $servicesContainer = document.querySelector('.sect-services');
+
 getData(art_services).then(data => {
   data.services.forEach(service => {
     const serviceDiv = document.createElement('div');
     serviceDiv.classList.add('service');
+
     serviceDiv.innerHTML = `
-    
       <img src="${service.icon}" alt="${service.title} Icon" />
       <h3>${service.title}</h3>
       <p>${service.description}</p>
+
       <div>
-      <a href="/service.html#${service.section_page}">Leer mas</a>
-        <a target="_blank" href="https://wa.me/541134229643?text=${service.ms_whatsapp}">Contratar</a>
+        <a href="/servicePage.html?id=${service.id}">Leer más</a>
+        <a 
+          target="_blank"
+          href="https://wa.me/541134229643?text=${encodeURIComponent(service.ms_whatsapp)}"
+        >
+          Contratar
+        </a>
       </div>
-    
     `;
+
     $servicesContainer.appendChild(serviceDiv);
   });
 });
+
 
 // * Article about we
 getData(art_about_we).then(data=> {
@@ -214,30 +246,47 @@ getData(art_projects).then(data => {
 
     renderProjects(filteredProjects);
   });
-
-  // 🎛️ FILTROS
-  $filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const type = button.textContent.trim();
-
-      let sorted = [...filteredProjects];
-
-      if (type === 'A–Z') {
-        sorted.sort((a, b) =>
-          a.name.localeCompare(b.name)
-        );
-      }
-
-      if (type === 'Recientes') {
-        sorted.sort((a, b) =>
-          new Date(b.launch) - new Date(a.launch)
-        );
-      }
-
-      renderProjects(sorted);
-    });
-  });
-
   // Render inicial
   renderProjects(projects);
 });
+
+
+const projects = document.querySelector('.projects');
+const btnLeft = document.querySelector('.carousel-btn.left');
+const btnRight = document.querySelector('.carousel-btn.right');
+
+const scrollAmount = 350;
+const tolerance = 10; // ← clave
+
+function updateCarouselButtons() {
+  const atStart = projects.scrollLeft <= tolerance;
+
+  const atEnd =
+    projects.scrollLeft + projects.clientWidth >=
+    projects.scrollWidth - tolerance;
+
+  btnLeft.style.opacity = atStart ? '0' : '1';
+  btnLeft.style.pointerEvents = atStart ? 'none' : 'auto';
+
+  btnRight.style.opacity = atEnd ? '0' : '1';
+  btnRight.style.pointerEvents = atEnd ? 'none' : 'auto';
+}
+
+btnRight.addEventListener('click', () => {
+  projects.scrollBy({
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+});
+
+btnLeft.addEventListener('click', () => {
+  projects.scrollBy({
+    left: -scrollAmount,
+    behavior: 'smooth'
+  });
+});
+
+projects.addEventListener('scroll', updateCarouselButtons);
+window.addEventListener('load', updateCarouselButtons);
+window.addEventListener('resize', updateCarouselButtons);
+
