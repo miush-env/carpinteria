@@ -15,6 +15,41 @@ h6 {
 }
 
 
+/* ===============================
+   Estado base
+================================ */
+.rotate-warning {
+  position: fixed;
+  inset: 0;
+  background: #ccc;
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 9999;
+}
+
+/* ===============================
+   SOLO móviles en horizontal
+================================ */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  body {
+    overflow: hidden;
+  }
+
+  header,
+  main,
+  footer {
+    display: none;
+  }
+
+  .rotate-warning {
+    display: flex;
+  }
+}
+
 /* HEADER & NAV */
 .header-nav-bar {
   z-index: 10;
