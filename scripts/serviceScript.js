@@ -1,21 +1,45 @@
+const header = document.querySelector('.header-nav-bar');
+const toggle = document.querySelector('.menu-toggle');
+const links = document.querySelectorAll('.nav-bar a');
 
-  const header = document.querySelector('.header-nav-bar');
-  const toggle = document.querySelector('.menu-toggle');
-  const links = document.querySelectorAll('.nav-bar a');
-
-  toggle.addEventListener('click', () => {
-    header.classList.toggle('active');
-  });
-
-  links.forEach(link =>
-    link.addEventListener('click', () => {
-      header.classList.remove('active');
-    })
-  );
-
-document.getElementById('btnBackPage').addEventListener('click', () => {
-  window.history.back();
+// Abrir/cerrar menú al hacer click en el toggle
+toggle.addEventListener('click', () => {
+  if (window.innerWidth > 899) return; // solo mobile
+  header.classList.toggle('active');
 });
+
+// Cerrar menú al hacer click en un link
+links.forEach(link =>
+  link.addEventListener('click', () => {
+    header.classList.remove('active');
+  })
+);
+
+// Cerrar menú al hacer scroll (solo mobile)
+window.addEventListener('scroll', () => {
+  if (window.innerWidth > 899) return;
+  if (header.classList.contains('active')) {
+    header.classList.remove('active');
+  }
+});
+
+// Cerrar menú al hacer swipe hacia arriba (solo mobile)
+let touchStartY = 0;
+const minSwipeDistance = 30;
+
+document.addEventListener('touchstart', (e) => {
+  if (window.innerWidth > 899) return;
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+document.addEventListener('touchend', (e) => {
+  if (window.innerWidth > 899) return;
+  const touchEndY = e.changedTouches[0].clientY;
+  const distance = touchStartY - touchEndY;
+  if (distance > minSwipeDistance && header.classList.contains('active')) {
+    header.classList.remove('active');
+  }
+}, { passive: true });
 
 const SERVICE_URL = '/dataPages/Services/service.json';
 
@@ -67,3 +91,6 @@ getData(SERVICE_URL).then(data => {
   )}`;
 });
 
+document.getElementById('btnBackPage').addEventListener('click', () => {
+  window.history.back();
+});

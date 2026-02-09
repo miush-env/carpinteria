@@ -1,16 +1,16 @@
 {
-	"about_we_sects": [
-		{
-			"img_url": "/assets/AboutWe/home_workshop.png",
-			"icon": "home",
-			"title": "como iniciamos",
-			"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod accusamus esse fuga, distinctio temporibus eveniet culpa repudiandae sunt aperiam iusto cupiditate! Officiis provident nemo illum quo quibusdam, voluptate quisquam labore consequuntur, nesciunt rem soluta id autem fugit nam dolores hic aut aliquid enim necessitatibus fugiat possimus voluptates beatae! Modi provident sed animi quas soluta quae pariatur sint illum asperiores non tempore et, sapiente inventore mollitia nesciunt. Rem quia beatae ea hic molestias et sit voluptatibus!"
-		},
-		{
-			"img_url": "/assets/AboutWe/teamwork.png",
-			"icon": "eye_tracking",
-			"title": "nueustras metas",
-			"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, iusto odit! Incidunt ex voluptates reiciendis molestiae placeat, ab, sequi veritatis adipisci enim laudantium sit accusantium ipsam, laborum vitae laboriosam iure."
-		}
-	]
+  "about_we_sects": [
+    {
+      "img_url": "/assets/AboutWe/home_workshop.png",
+      "icon": "home",
+      "title": "como iniciamos",
+      "description": "Madero Sur nace del trabajo constante y la experiencia en carpintería. Hace más de 30 años nos dedicamos a crear soluciones en madera, manteniendo una forma de trabajar basada en la confianza, el compromiso y la atención al detalle. Realizamos trabajos a medida para hogares, utilizando materiales de calidad y cuidando cada proceso, desde la idea hasta la terminación final. Trabajamos en todo el Gran Buenos Aires y alrededores, con el objetivo de ofrecer resultados duraderos y adaptados a cada cliente."
+    },
+    {
+      "img_url": "/assets/AboutWe/teamwork.png",
+      "icon": "eye_tracking",
+      "title": "nuestras metas",
+      "description": "Nuestra meta es seguir creciendo sin perder la esencia del oficio. Buscamos perfeccionar cada trabajo, adaptarnos a las necesidades de cada cliente y ofrecer soluciones de carpintería a medida que combinen funcionalidad, calidad y buen diseño. Queremos que cada proyecto refleje nuestro compromiso y se convierta en una relación de confianza a largo plazo con quienes nos eligen."
+    }
+  ]
 }

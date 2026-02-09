@@ -34,7 +34,7 @@ h6 {
 /* ===============================
    SOLO móviles en horizontal
 ================================ */
-@media screen and (max-width: 767px) and (orientation: landscape) {
+@media screen and (max-width: 967px) and (orientation: landscape) {
   body {
     overflow: hidden;
   }
@@ -353,7 +353,6 @@ h6 {
 .art-services {
   background-color: #e67c04;
   padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 2rem);
-  min-height: 100vh;
 }
 
 .welcome-art-services {
@@ -864,6 +863,8 @@ h6 {
 }
 
 .review {
+  user-select: none;
+  cursor: pointer;
   flex-shrink: 0;
   margin-right: 2rem;
   /* 🔑 NO se achican */
@@ -972,29 +973,19 @@ h6 {
 
 /* SECCIÓN SUPERIOR */
 .footer-top {
-  /* background-color: var(--light-bg); */
+  background-color: var(--light-bg);
   padding: 80px 0;
-  border-bottom: 1px solid #eee;
-  background-image: url("https://i.pinimg.com/1200x/30/f0/55/30f0552fa5de85a4e5109661a72561bf.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-top>*>*>* {
-  color: #fff;
+  /* background-image: url("https://i.pinimg.com/1200x/30/f0/55/30f0552fa5de85a4e5109661a72561bf.jpg"); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-attachment: fixed; */
 }
 
 .top-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .cta-text {
@@ -1002,9 +993,7 @@ h6 {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  color: #fff;
-  font-size: 1.6rem;
-  text-align: center;
+  font-size: 0.8rem;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -1019,8 +1008,6 @@ h6 {
   font-size: 5rem;
   margin: 0;
   font-weight: 500;
-  position: relative;
-  /* Subrayado con tu color naranja */
   border-bottom: 6px solid var(--primary-orange);
   line-height: 1;
 }
@@ -1062,6 +1049,7 @@ h6 {
 }
 
 .brand-slogan {
+  color: #fff;
   font-size: 2.2rem;
   line-height: 1.1;
   margin: 0;
@@ -1243,6 +1231,7 @@ h6 {
 
   .art-services {
     background-image: url("assets/parallax-mobile.jpg");
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

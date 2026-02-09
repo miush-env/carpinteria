@@ -1,4 +1,3 @@
-
 const header = document.querySelector('.header-nav-bar');
 const toggle = document.querySelector('.menu-toggle');  
 const links = document.querySelectorAll('.nav-bar a');
@@ -99,6 +98,10 @@ getData(art_services).then(data => {
 
     $servicesContainer.appendChild(serviceDiv);
   });
+  
+  document.querySelector('.welcome-art-services span').innerHTML = data.caption_top
+  document.querySelector('.welcome-art-services h2').innerHTML = data.title
+  document.querySelector('.welcome-art-services p').innerHTML = data.description
 });
 
 

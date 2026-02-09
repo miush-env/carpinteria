@@ -14,10 +14,46 @@ h6 {
   font-family: 'TASA Orbiter', sans-serif;
 }
 
+/* ===============================
+   Estado base
+================================ */
+.rotate-warning {
+  position: fixed;
+  inset: 0;
+  background: #ccc;
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 9999;
+}
+
+/* ===============================
+   SOLO móviles en horizontal
+================================ */
+@media screen and (max-width: 967px) and (orientation: landscape) {
+  body {
+    overflow: hidden;
+  }
+
+  header,
+  main,
+  footer,
+  .btn-back-page {
+    display: none;
+  }
+
+  .rotate-warning {
+    display: flex;
+  }
+}
+
 .btn-back-page {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
   width: 50px;
   height: 50px;
   background-color: #e67c04;
@@ -456,6 +492,7 @@ h1 {
 }
 
 .brand-slogan {
+  color: #fff;
   font-size: 2.2rem;
   line-height: 1.1;
   margin: 0;
